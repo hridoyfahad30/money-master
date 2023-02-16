@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Money Master</title>
+  </head>
+  <body>
+    <section class="bg-indigo-100 w-screen grid content-center justify-center h-screen pb-12">
+      <h1 class="text-center text-emerald-500 text-5xl font-semibold pb-12 pt-12">
+        Money Master 💰</h1>
+
+      <div class="sm:grid sm:grid-cols-1 md:grid md:grid-cols-2 gap-6">
+        <div>
+          <img class="rounded-2xl" src="./images/bg.png" alt="" />
+        </div>
+        <div class="bg-slate-300 p-6 text-center rounded-2xl">
+          <h1 class="text-2xl font-semibold py-4">Income</h1>
+          <div class="py-3">
+            <label class="text-xl" for="income">Income:</label>
+            <input id="incomeFild" class="bg-slate-500 rounded-lg h-10 text-white font-semibold text-xl text-center " type="number" /><br><span id="incomeErr" class="hidden pt-1 pl-16 text-lg text-red-600 font-semibold">Please Input a Valid Number</span>
+          </div>
+          <h1 class="text-2xl font-semibold py-4">Expenses</h1>
+          <div class="py-2">
+            <label class="text-xl" for="income">Food:</label>
+            <input id="foodExpense" class="bg-slate-500 rounded-lg h-10 text-white font-semibold text-xl text-center " type="number" /><br><span id="foodErr" class="hidden pt-1 pl-16 text-lg text-red-600 font-semibold">Please Input a Valid Number</span>
+          </div>
+          <div class="py-2">
+            <label class="text-xl" for="income">Rent:</label>
+            <input id="rentExpense" class="bg-slate-500 rounded-lg h-10 text-white font-semibold text-xl text-center " type="number" /><br><span id="rentErr" class="hidden pt-1 pl-16 text-lg text-red-600 font-semibold">Please Input a Valid Number</span>
+          </div>
+          <div class="py-2 pb-4">
+            <label class="text-xl" for="income">Clothes:</label>
+            <input id="clotheExpense" class="bg-slate-500 rounded-lg h-10 text-white font-semibold text-xl text-center " type="number" /><br><span id="clotheErr" class="hidden pt-1 pl-16 text-lg text-red-600 font-semibold">Please Input a Valid Number</span>
+          </div>
+          <button id="calculateBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full">
+            Calculate
+          </button><br><span id="expErr" class="hidden pt-3 pl-16 text-1xl text-red-600 font-bold">"You cannot spend more than your Income."</span>
+          <h1 class="text-2xl font-semibold pb-2 pt-6">Total Expenses: <span id="totalCost">0</span></h1>
+          <h1 class="text-2xl font-semibold pb-6">Balance: <span id="balance">0</span></h1>
+          <div class="sm:flex sm:flex-row md:flex items-center justify-center gap-4 ">
+            <label class="text-xl font-semibold py-4" for="save">Save:</label>
+            <input id="savefild" class="bg-slate-500 rounded-lg h-10 text-white font-semibold text-xl text-center" type="number" />
+            <h2 class="py-2 text-2xl font-bold">%</h2>
+            <button id="saveButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+                Save
+              </button>
+          </div>
+          <br><span id="saveErr" class="hidden pt-3 pl-16 text-1xl text-red-600 font-bold">"You cannot save more than your Current Balance."</span>
+          <h1 class="text-2xl font-semibold pb-2">Saving Amount: <span id="savingsPercent">0</span></h1>
+          <h1 class="text-2xl font-semibold">Remaining Balance: <span id="remainBalance">0</span></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- js -->
+    <script src="./js/utility.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
